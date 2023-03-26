@@ -15,7 +15,7 @@
             _size = size;
             _cube = new int[_size, _size, _size];
         }
-        public void GenerateVoids()
+        public int[,,] GenerateVoids()
         {
             Random random = new Random();
             for (int i = 0; i < _size; i++)
@@ -28,6 +28,7 @@
                     }
                 }
             }
+            return _cube;
         }
         public void FindThroughLinearHole()
         {
