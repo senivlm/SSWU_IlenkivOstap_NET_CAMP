@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 using System.Timers;
 
 namespace Homework1
-{
+{// клас з статичними методами - це по суті функціональний підхід. Іноді це вимушений крок. Не бачу, чому у цьому випадку..
     internal class Task1
     {
         static int[,] matrix = new int[,] { { 1 } };
         public static void GenerateSpiralMatrix(int sizeX = 8, int sizeY = 9,
             StartPoint point = StartPoint.BottomRight, Direction direction = Direction.ToRight)
-        {
+        {// ваш метод називається генерація матриці, а він ще хоче роздруковувати. забагато на себе бере обов'язків...
             Console.WriteLine("Task 1:\n\n");
 
             if (sizeX <= 0 || sizeY <= 0)
-            {
+            {// тут в майбутньому краще генерувати вийняток.
                 Console.WriteLine("Matrix must have at least one column and row!");
                 return;
             }
@@ -64,6 +64,7 @@ namespace Homework1
                     Console.WriteLine("\n\n");
                 }
         }
+        // а тут цікаво...
         static bool ChangePointAndDir(StartPoint point, Direction direction)
         {
             switch ((point, direction))
@@ -100,6 +101,7 @@ namespace Homework1
                     return false;
             }
         }
+        //мали будувати спіральку. Поясніть на занятті цей метод...
         static void Mirror(bool byX)
         {
             int[,] tempMatrix = matrix.Clone() as int[,];
