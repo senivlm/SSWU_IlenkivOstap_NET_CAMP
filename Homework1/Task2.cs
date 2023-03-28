@@ -16,7 +16,7 @@
             for (int i = 0; i < _sizeX; i++)
             {
                 for (int j = 0; j < _sizeY; j++)
-                {
+                {// Чарівна константна захаркоджена...
                     _matrix[i, j] = rnd.Next(0, 17);
                 }
             }
@@ -28,7 +28,7 @@
             _sizeX = matrix.GetLength(0);
             _sizeY = matrix.GetLength(1);
         }
-
+// не свої дії в методі(роздрук...)
         public void GetIndexesAndLenght()
         {
             Console.WriteLine("```````````\nTask 2:\n\n");
